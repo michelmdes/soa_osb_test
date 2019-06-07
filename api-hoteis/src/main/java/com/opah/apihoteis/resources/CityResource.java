@@ -30,7 +30,7 @@ public class CityResource {
 			value="Pesquisar hoteis na cidade escolhida, calculando o "
 					+ "valor total da viagem e adicionando a comissão para cada um dos quartos retornados",
 			response=List.class, 
-			notes="Essa lista não valida se o hotel tem vaga disponível, retorna todos os hoteis da lista do cliente")
+			notes="Imput de data no padrão 'dd/MM/yyyy'. Essa lista não valida se o hotel tem vaga disponível, retorna todos os hoteis da lista do cliente")
 	@GetMapping("/{cityCode}/hotels")
 	public ResponseEntity<List<Hotel>> findByCityCode(@PathVariable("cityCode") Long cityCode,
 			@RequestParam(value="dtCheckin") String dtCheckin,
